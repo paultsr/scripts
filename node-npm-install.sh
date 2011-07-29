@@ -6,7 +6,7 @@
 #################################################
 
 if [ ! -d ~/source ]; then
-	echo "Creating directory $USR/source."
+	echo "Creating directory $HOME/source."
 	echo "This is where we're going to keep Node and NPM up-to-date!"
 	mkdir ~/source 
 fi
@@ -18,10 +18,10 @@ sudo chown $USER /usr/local/{share/man,bin,lib/node,lib/node_modules,lib/pkgconf
 
 cd ~/source
 if [ ! -d ./node ]; then
-	"Git repo does not currently exist for Node, cloning..."
+	echo "Git repo does not currently exist for Node, cloning..."
 	git clone git://github.com/joyent/node.git && cd node
 else
-	"Updating existing git repo for Node..."
+	echo "Updating existing git repo for Node..."
 	cd node && git pull
 fi
 
@@ -34,10 +34,10 @@ make install
 
 cd ~/source
 if [ ! -d ./npm ]; then
-	"Git repo does not currently exist for NPM, cloning..."
+	echo "Git repo does not currently exist for NPM, cloning..."
 	git clone git://github.com/isaacs/npm.git && cd npm
 else
-	"Updating existing git repo for NPM..."
+	echo "Updating existing git repo for NPM..."
 	cd npm && git pull
 fi
 echo "Installing NPM! This won't hurt a bit."
