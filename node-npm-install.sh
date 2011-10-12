@@ -26,7 +26,7 @@ else
 fi
 
 echo "Checking out the latest stable version of Node that we know of..."
-git checkout v0.4.9 	#latest stable atm
+git checkout v0.4.12 	#latest stable atm
 ./configure
 echo "Installing Node! Please be patient, this might take a while."
 make install
