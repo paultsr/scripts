@@ -10,6 +10,7 @@ sudo sh -c 'echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart di
 
 echo "apt-get update && apt-get -y dist-upgrade && apt-get -y upgrade" | sudo sh
 # Essentials
-echo "apt-get -y install make autoconf build-essential libssl-dev libpcre3-dev libncurses-dev" | sudo sh
+echo "apt-get -y install build-essential make autoconf" | sudo sh
+echo "apt-get -y install libssl-dev zlib1g-dev libpcre3-dev libncurses-dev" | sudo sh
 # Essential programs/binaries
-echo "apt-get -y install vim curl wget rsync git" | sudo sh
+echo "apt-get -y install vim curl wget zip rsync git" | sudo sh
